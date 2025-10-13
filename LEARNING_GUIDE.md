@@ -1,6 +1,4 @@
 # 🎓 Facial Emotion Recognition - Complete Learning Guide
-## Explaining Every Line Like You're 5 Years Old! 🧒
-
 ---
 
 ## 📚 Table of Contents
