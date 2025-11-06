@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.optim.lr_scheduler import CosineAnnealingLR
-from dataset import train_loader, val_loader, test_loader, class_weights, class_names
-from model import ImprovedFER_CNN
+from dataset_fer2013 import train_loader, val_loader, test_loader, class_weights, class_names
+from model_fer2013 import ImprovedFER_CNN
 from tqdm import tqdm
 import os
 
@@ -117,7 +117,7 @@ for epoch in range(num_epochs):
             'model_state_dict': model.state_dict(),
             'optimizer_state_dict': optimizer.state_dict(),
             'val_acc': val_acc,
-        }, '../models/best_model_improved.pth')
+        }, '../models/best_model_fer2013.pth')
         print(f"  ✓ New best model saved! (Val Acc: {val_acc:.2f}%)")
     else:
         patience_counter += 1
@@ -132,7 +132,7 @@ print(f"{'='*60}\n")
 
 # ========== FINAL TEST EVALUATION ==========
 print("Loading best model and evaluating on test set...")
-checkpoint = torch.load('../models/best_model_improved.pth')
+checkpoint = torch.load('../models/best_model_fer2013.pth')
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
