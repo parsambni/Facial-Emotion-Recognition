@@ -395,7 +395,7 @@ Project Link: [https://github.com/parsambni/Facial-Emotion-Recognition](https://
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/parsambni">Parsa Sambni</a>
+  Made with ❤️ by <a href="https://github.com/parsambni">Parsa Mobini Dehkordi</a>
 </p>
 
 <p align="center">
